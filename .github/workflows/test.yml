@@ -1,0 +1,22 @@
+name: Unit Test
+on:
+  pull_request:
+    branches:
+      - "main"
+
+jobs:
+  run-jest-tests:
+    name: Jest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          cache: yarn
+      - uses: ArtiomTr/jest-coverage-report-action@v2.0-rc.6
+        with:
+          github-token: ${{ github.token }}
+          package-manager: yarn
