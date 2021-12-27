@@ -1,3 +1,3 @@
-import { factorize } from "./factorize"
+import { factorial } from "./factorial"
 
-console.log(factorize(9))
+console.log(factorial(9))

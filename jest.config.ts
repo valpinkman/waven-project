@@ -7,7 +7,7 @@ export default {
   },
   testEnvironment: "node",
   coverageDirectory: "./coverage/",
-  coverageReporters: ["json", "lcov", "clover"],
+  coverageReporters: ["json", "lcov", "text", "text-summary"],
   collectCoverage: true,
   coveragePathIgnorePatterns: ["src/__tests__"],
   coverageProvider: "v8",
